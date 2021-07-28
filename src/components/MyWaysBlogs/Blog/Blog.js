@@ -7,7 +7,7 @@ const Blog = () => {
     const [blog, setBlog] = useState({})
     const { id } = useParams();
     useEffect(() => {
-        axios.post('http://localhost:8080/api/blog/oneBlog', {
+        axios.post('https://mywaysblogserver.herokuapp.com/api/blog/oneBlog', {
             _id: id 
         })
         .then((response) => {

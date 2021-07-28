@@ -19,7 +19,7 @@ const BlogCard = (props) => {
         <hr />
         <div className="blogcard__footer">
           <p>5 min read</p>
-          <Link to={`MyWaysBlogs/blog/${props.blog._id}`}>Read More</Link>
+          <Link to={`mywaysblog/blog/${props.blog._id}`}>Read More</Link>
         </div>
       </Card>
     </>

@@ -27,6 +27,9 @@ const MyNavbar = (props) => {
             <NavItem>
             <NavLink><Link to="/mywaysblog/register" className="text-decoration-none text-secondary">Register</Link></NavLink>
             </NavItem>
+            <NavItem>
+            <NavLink><Link to="/mywaysblog/addBlog" className="text-decoration-none text-secondary">AddBlog</Link></NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
