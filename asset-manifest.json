@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/MyWaysBlogs/static/css/main.314cd60a.chunk.css",
+    "main.js": "/MyWaysBlogs/static/js/main.deb86f96.chunk.js",
+    "main.js.map": "/MyWaysBlogs/static/js/main.deb86f96.chunk.js.map",
+    "runtime-main.js": "/MyWaysBlogs/static/js/runtime-main.be006bdf.js",
+    "runtime-main.js.map": "/MyWaysBlogs/static/js/runtime-main.be006bdf.js.map",
+    "static/css/2.e9d605be.chunk.css": "/MyWaysBlogs/static/css/2.e9d605be.chunk.css",
+    "static/js/2.bc7c1be1.chunk.js": "/MyWaysBlogs/static/js/2.bc7c1be1.chunk.js",
+    "static/js/2.bc7c1be1.chunk.js.map": "/MyWaysBlogs/static/js/2.bc7c1be1.chunk.js.map",
+    "static/js/3.58e19205.chunk.js": "/MyWaysBlogs/static/js/3.58e19205.chunk.js",
+    "static/js/3.58e19205.chunk.js.map": "/MyWaysBlogs/static/js/3.58e19205.chunk.js.map",
+    "index.html": "/MyWaysBlogs/index.html",
+    "static/css/2.e9d605be.chunk.css.map": "/MyWaysBlogs/static/css/2.e9d605be.chunk.css.map",
+    "static/css/main.314cd60a.chunk.css.map": "/MyWaysBlogs/static/css/main.314cd60a.chunk.css.map",
+    "static/js/2.bc7c1be1.chunk.js.LICENSE.txt": "/MyWaysBlogs/static/js/2.bc7c1be1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.be006bdf.js",
+    "static/css/2.e9d605be.chunk.css",
+    "static/js/2.bc7c1be1.chunk.js",
+    "static/css/main.314cd60a.chunk.css",
+    "static/js/main.deb86f96.chunk.js"
+  ]
+}
