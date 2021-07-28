@@ -1,0 +1,18 @@
+.blogcard{
+    &__container{
+        width: 100%;
+    }
+    &__footer{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+    &__cardBody{
+        padding:0.7rem 0.7rem;
+        &__cardSubtitle{
+            font-size: small;
+            font-weight: 100;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.addBlog{
+    input{
+        width: 100%;
+        border: 1px solid rgb(182, 182, 182);
+    }
+    &__blogHeading{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        h2{
+            margin-left: 1vw;
+        }
+    }
+}
