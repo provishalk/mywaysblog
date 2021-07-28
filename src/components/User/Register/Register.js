@@ -29,7 +29,7 @@ const Register = ({ history }) => {
             setContact("");
             setConfirmPassword("");
             setFullName("");
-            history.push("/MyWaysBlogs/login");
+            history.push("/mywaysblog/login");
          })
          .catch((error) => console.log(error.response));
         console.log(data);
@@ -91,7 +91,7 @@ const Register = ({ history }) => {
                 <Button className="col" onClick={onClickHandler}>Submit</Button>
                 <FormGroup className="d-flex justify-content-center mt-2">
                     <Label>Already have account?</Label>
-                    <Link to="/MyWaysBlogs/login">Login?</Link>
+                    <Link to="/mywaysblog/login">Login?</Link>
                 </FormGroup>
             </div>
         </div>

@@ -11,10 +11,10 @@ function App() {
       <BrowserRouter>
         <MyNavbar />
         <Route path="/mywaysblog" exact component={MyWaysBlogs} />
-        <Route path="/MyWaysBlogs/login" exact component={Login} />
-        <Route path="/MyWaysBlogs/register" exact component={Register} />
-        <Route path="/MyWaysBlogs/addBlog" exact component={AddBlog} />
-        <Route path="/MyWaysBlogs/blog/:id" exact component={Blog} />
+        <Route path="/mywaysblog/login" exact component={Login} />
+        <Route path="/mywaysblog/register" exact component={Register} />
+        <Route path="/mywaysblog/addBlog" exact component={AddBlog} />
+        <Route path="/mywaysblog/blog/:id" exact component={Blog} />
       </BrowserRouter>
     </>
   );

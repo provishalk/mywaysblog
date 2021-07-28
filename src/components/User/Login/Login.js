@@ -15,7 +15,7 @@ const Login = ({ history }) => {
             console.log(response.data);
             setEmail("");
             setPassword("");
-            history.push("/MyWaysBlogs");
+            history.push("/mywaysblog");
          })
          .catch((error) => console.log(error.response));
         console.log(data);
@@ -46,7 +46,7 @@ const Login = ({ history }) => {
                 </FormGroup>
                 <FormGroup className="d-flex justify-content-center mt-2">
                     <Label>Don't have an account yet?</Label>
-                    <Link to="/MyWaysBlogs/register">Register?</Link>
+                    <Link to="/mywaysblog/register">Register?</Link>
                 </FormGroup>
             </div>
         </div>
