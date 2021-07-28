@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mywaysblog/static/css/main.314cd60a.chunk.css",
-    "main.js": "/mywaysblog/static/js/main.fcb06ef8.chunk.js",
-    "main.js.map": "/mywaysblog/static/js/main.fcb06ef8.chunk.js.map",
+    "main.js": "/mywaysblog/static/js/main.46a9d1ba.chunk.js",
+    "main.js.map": "/mywaysblog/static/js/main.46a9d1ba.chunk.js.map",
     "runtime-main.js": "/mywaysblog/static/js/runtime-main.78067e2d.js",
     "runtime-main.js.map": "/mywaysblog/static/js/runtime-main.78067e2d.js.map",
     "static/css/2.e9d605be.chunk.css": "/mywaysblog/static/css/2.e9d605be.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.e9d605be.chunk.css",
     "static/js/2.bc7c1be1.chunk.js",
     "static/css/main.314cd60a.chunk.css",
-    "static/js/main.fcb06ef8.chunk.js"
+    "static/js/main.46a9d1ba.chunk.js"
   ]
 }
