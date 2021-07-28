@@ -1,4 +1,3 @@
-import MyNavbar from "./components/NavBar/MyNavbar";
 import MyWaysBlogs from "./components/MyWaysBlogs/MyWaysBlogs";
 import { BrowserRouter, Route } from "react-router-dom";
 import AddBlog from "./components/AddBlog/AddBlog";
@@ -9,7 +8,6 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <MyNavbar />
         <Route path="/mywaysblog" exact component={MyWaysBlogs} />
         <Route path="/mywaysblog/login" exact component={Login} />
         <Route path="/mywaysblog/register" exact component={Register} />

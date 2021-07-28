@@ -11,9 +11,13 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 const MyNavbar = (props) => {
+  const getNameFromLocalStorage = () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    return user ? user.fullName : "User";
+  };
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
+  const isLoggedIn = localStorage.getItem("user");
   return (
     <div>
       <Navbar color="light" light expand="md">
@@ -21,19 +25,32 @@ const MyNavbar = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse className="my_navbar__navbarContent" isOpen={isOpen} navbar>
           <Nav navbar>
-            <NavItem>
-              <NavLink><Link to="/mywaysblog/login" className="text-decoration-none text-secondary">Login</Link></NavLink>
+            {isLoggedIn ? (
+              <NavItem>
+                <NavLink><Link to="/mywaysblog" className="text-decoration-none text-secondary" onClick={() => { localStorage.clear(); }}>Logout</Link></NavLink>
+              </NavItem>
+            ) : (
+              <NavItem>
+                <NavLink><Link to="/mywaysblog/login" className="text-decoration-none text-secondary">Login</Link></NavLink>
+              </NavItem>
+            )}
+              {isLoggedIn?(
+                <NavItem>
+              <NavLink>{getNameFromLocalStorage()}</NavLink>
             </NavItem>
-            <NavItem>
+          ):(
+          <NavItem>
             <NavLink><Link to="/mywaysblog/register" className="text-decoration-none text-secondary">Register</Link></NavLink>
-            </NavItem>
-            <NavItem>
+          </NavItem>
+          )
+            }
+          <NavItem>
             <NavLink><Link to="/mywaysblog/addBlog" className="text-decoration-none text-secondary">AddBlog</Link></NavLink>
-            </NavItem>
+          </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+    </div >
   );
 }
 

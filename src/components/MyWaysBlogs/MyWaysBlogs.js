@@ -2,10 +2,10 @@ import React,{useState,useEffect} from 'react';
 import MainHeading from '../MainHeading/MainHeading';
 import BlogCard from '../BlogCard/BlogCard';
 import axios from "axios";
-
+import MyNavbar from '../NavBar/MyNavbar'
 const MyWaysBlogs = () => {
     const [blogs, setBlogs] = useState([]);
-
+    console.log(localStorage);
     useEffect(() => {
         axios
           .get("https://mywaysblogserver.herokuapp.com/api/blog/allBLogs")
@@ -16,6 +16,7 @@ const MyWaysBlogs = () => {
       }, []);
 return (
     <div className="myWaysBlogs">
+        <MyNavbar/>
         <MainHeading />
         <div class="container col-lg-8">
             <div class="row">
