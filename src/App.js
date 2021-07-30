@@ -1,9 +1,16 @@
 import MyWaysBlogs from "./components/MyWaysBlogs/MyWaysBlogs";
 import { BrowserRouter, Route } from "react-router-dom";
-import AddBlog from "./components/AddBlog/AddBlog";
+import AddBlog from "./components/MyWaysBlogs/Blog/AddBlog/AddBlog"
 import Blog from "./components/MyWaysBlogs/Blog/Blog";
 import Login from "./components/User/Login/Login";
 import Register from "./components/User/Register/Register";
+import alertify from "alertifyjs";
+
+alertify.default={
+  notifier:{
+    position:'top-right'
+  }
+}
 function App() {
   return (
     <>

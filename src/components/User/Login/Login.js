@@ -23,15 +23,20 @@ const Login = ({ history }) => {
                     setEmail("");
                     setPassword("");
                     localStorage.setItem("user", JSON.stringify(response.data));
+                    alertify.success('Succefully Logged In');
                     history.push("/mywaysblog");
                 })
                 .catch((error) => {
-                    console.log(error.response);
                     alertify.warning(error.response.data.message);
                 });
         }
         else {
-            alertify.warning("Enter Valid Data")
+            if(!emailFlag){
+                alertify.warning("Enter Correct Email!")
+            }
+            else{
+                alertify.warning("Something went wrong!")
+            }
         }
     }
     return (

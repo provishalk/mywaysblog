@@ -1,5 +1,10 @@
-.myWaysBlogs{
-    &__card_container{
-
+.myWaysBlogs {
+    &__mainHeading {
+        margin: 3vw;
+        h1 {
+            font-size: 2em;
+            font-weight: 500;
+            margin-left: 8vw;
+        }
     }
 }

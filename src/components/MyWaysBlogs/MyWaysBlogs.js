@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from 'react';
-import MainHeading from '../MainHeading/MainHeading';
-import BlogCard from '../BlogCard/BlogCard';
+import BlogCard from "./Blog/BlogCard/BlogCard"
 import axios from "axios";
 import MyNavbar from '../NavBar/MyNavbar'
+import "./MyWaysBlogs.scss"
 const MyWaysBlogs = () => {
     const [blogs, setBlogs] = useState([]);
     console.log(localStorage);
@@ -17,7 +17,9 @@ const MyWaysBlogs = () => {
 return (
     <div className="myWaysBlogs">
         <MyNavbar/>
-        <MainHeading />
+        <div className="myWaysBlogs__mainHeading">
+            <h1>MyWays Blogs</h1>
+        </div>
         <div class="container col-lg-8">
             <div class="row">
                 {blogs.map((blog=>{return <div className="col-md-4 mb-3"><BlogCard blog={blog} key={blog._id}/></div>}))}

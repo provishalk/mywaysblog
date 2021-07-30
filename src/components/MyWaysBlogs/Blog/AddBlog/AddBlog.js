@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
-import BlogEditor from '../BlogEditor/BlogEditor'
+import BlogEditor from './BlogEditor/BlogEditor'
 import './AddBlog.scss'
 import axios from "axios";
+import MyNavbar from '../../../NavBar/MyNavbar';
 const AddBlog = () => {
     const [title, setTitle] = useState("");
     const [imgLink, setImgLink] = useState("");
@@ -29,6 +30,8 @@ const AddBlog = () => {
          setImgLink("");
     }
     return (
+        <>
+        <MyNavbar/>
         <div className="container mt-4 addBlog">
             <div className="addBlog__blogHeading">
                 <h2>Add Blog</h2>
@@ -42,6 +45,7 @@ const AddBlog = () => {
             }}/>
             <BlogEditor onHtmlContentHandler={htmlContentHandler}/>
         </div>
+        </>
     )
 }
 

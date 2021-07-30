@@ -6,6 +6,7 @@ import MyNavbar from '../../NavBar/MyNavbar';
 import alertify from "alertifyjs";
 const Register = ({ history }) => {
     const [fullName, setFullName] = useState("");
+    const [fullNameFlag, setFullNameFlag] = useState(false);
     const [email, setEmail] = useState("");
     const [emailFlag, setEmailFlag] = useState(false);
     const [contact, setContact] = useState("");
@@ -13,13 +14,18 @@ const Register = ({ history }) => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
+    const validateName = (name) => {
+        const re = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
+        return re.test(String(name).toLowerCase());
+    }
+
     const validateEmail = (email) => {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
-    const validateContact = (email) => {
+    const validateContact = (contact) => {
         const re = /^(\+\d{1,3}[- ]?)?\d{10}$/;
-        return re.test(String(email).toLowerCase());
+        return re.test(String(contact).toLowerCase());
     }
 
     const onClickHandler = () => {
@@ -27,6 +33,7 @@ const Register = ({ history }) => {
             email.trim().length === 0 ||
             contact.trim().length === 0 ||
             password.trim().length === 0) {
+            alertify.warning("Please fill all fields");    
             return
         }
         const data = {
@@ -39,7 +46,7 @@ const Register = ({ history }) => {
             alertify.warning("Password Not Match");
             return;
         }
-        else if(emailFlag&&contactFlag){
+        else if(emailFlag&&contactFlag&&fullNameFlag){
             axios.post('https://mywaysblogserver.herokuapp.com/api/user/register', data)
             .then((response) => {
                 console.log(response.data);
@@ -53,7 +60,16 @@ const Register = ({ history }) => {
             .catch((error) => alertify.warning(error.response.data.message));
         }
         else{
-            alertify.warning("Please Enter Valid Data");
+            if(!fullNameFlag){
+                alertify.warning("Full Name");
+            }
+            if(!emailFlag){
+                alertify.warning("EmailId");
+            }
+            if(!contactFlag){
+                alertify.warning("Phone No");
+            }
+            alertify.warning("Enter Valid Data:");
         }
     }
     return (
@@ -68,6 +84,14 @@ const Register = ({ history }) => {
                             value={fullName}
                             onChange={(event) => {
                                 setFullName(event.target.value);
+                                if (validateName(event.target.value)) {
+                                    event.target.style.color = "black";
+                                    setFullNameFlag(true);
+                                }
+                                else {
+                                    event.target.style.color = "red";
+                                    setFullNameFlag(false);
+                                }
                             }} />
                     </FormGroup>
                     <FormGroup>
