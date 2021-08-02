@@ -5,7 +5,6 @@ import MyNavbar from '../NavBar/MyNavbar'
 import "./MyWaysBlogs.scss"
 const MyWaysBlogs = () => {
     const [blogs, setBlogs] = useState([]);
-    console.log(localStorage);
     useEffect(() => {
         axios
           .get("https://mywaysblogserver.herokuapp.com/api/blog/allBLogs")
@@ -22,7 +21,7 @@ return (
         </div>
         <div class="container col-lg-8">
             <div class="row">
-                {blogs.map((blog=>{return <div className="col-md-4 mb-3"><BlogCard blog={blog} key={blog._id}/></div>}))}
+                {blogs.map((blog=>{return <div className="col-md-4 mb-3" key={blog._id}><BlogCard blog={blog}/></div>}))}
             </div>
         </div>
     </div>
